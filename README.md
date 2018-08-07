@@ -4,7 +4,7 @@ The week's labs for HTML
 * Week CSS  
 CSS labs
 * Week Bootstrap  
-Transitioning into Bootstrap =
+Transitioning into Bootstrap  
 * CSS-Dali  
 More CSS development
 * JavaScript  
