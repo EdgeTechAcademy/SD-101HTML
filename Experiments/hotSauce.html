@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var open = false;
+    $(document).ready(function() {
+      $("#left").addClass("FlyInFromLeft");
+      $("#right").addClass("FlyInFromRight");
+      $("#flip").click(function() {
+        if (!open) {
+          open = true;
+          $("#panel").slideDown("slow");
+        } else {
+          open = false;
+          $("#panel").slideUp("slow");
+        }
+      });
+    });
+  </script>
+
+  <style>
+    #panel,
+    #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #e5eecc;
+      border: solid 1px #c3c3c3;
+    }
+
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+
+    .left {
+      transform: translate(-150px, -10px);
+    }
+
+    .right {
+      transform: translate(0px, -1000px);
+    }
+
+    .FlyInFromLeft {
+      transform: translate(0px, 0px);
+      transition: width 2s, transform 2s;
+      width: 300px;
+      height: 200px;
+    }
+    .FlyInFromRight {
+      transform: translate(00px, 0px);
+      transition: width 2s, transform 2s;
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="flip">Click to slide down panel</div>
+  <div id="panel">
+    Hello world!
+    <img src="hotSauce.jpg" alt="">
+  </div>
+  <div id="left" class="left">
+    Coming from the left
+    <img src="hotSauce.jpg" alt="">
+  </div>
+  <div id="right" class="right">
+    coming from the right
+    <img src="hotSauce.jpg" alt="">
+  </div>
+</body>
+
+</html>

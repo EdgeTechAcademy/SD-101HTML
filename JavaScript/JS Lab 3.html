@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Writing Functions</title>
+</head>
+
+<body>
+  <label for="flight">Flight: </label>
+  <input type="text" name="flight" id='flight' value="">
+  <br>
+  <label for="hotel">Hotel: </label>
+  <input type="text" name="hotel" id='hotel' value="">
+  <br>
+  <label for="car">Car: </label>
+  <input type="text" name="car" id='car' value="">
+  <br>
+  <button type="button" onclick='getTaxAndTotal()' name="button">Trip Cost</button>
+  <br>
+  <label for="taxes">Taxes: </label>
+  <div id='taxes'></div>
+  <br>
+  <label for="total">Total: </label>
+  <div id='total'></div>
+</body>
+<script type="text/javascript">
+  function getTaxAndTotal() {
+    flight = document.getElementById('flight');
+    hotel = document.getElementById('hotel');
+    car = document.getElementById('car');
+    displayTaxAndTotal(flight.value, hotel.value, car.value);
+  }
+
+  function displayTaxAndTotal(flight, hotel, car) {
+    const TAX_RATE = 0.0825
+
+    var subtotal = parseInt(flight) + parseInt(car) + parseInt(hotel);
+    taxes = subtotal * TAX_RATE;
+    tax = document.getElementById('taxes');
+    total = document.getElementById('total');
+    tax.innerHTML = "$" + taxes.toFixed(2);
+    var final = subtotal + taxes;
+    total.innerHTML = "$" + final.toFixed(2);
+  }
+</script>
+
+</html>

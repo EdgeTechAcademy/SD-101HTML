@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="scripts/jso-art.js"></script>
+    <title>Custom Object</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><label for="ID">ID:</label></td>
+        <td><input type="text" id="ID" ></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td><input type="text" id="name"></td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td><input type="text" id="description"></td>
+      </tr>
+      <tr>
+        <td>Price</td>
+        <td><input type="text" id="price"></td>
+      </tr>
+      <tr>
+        <td><input type="button" onclick="addToCart();" value="Add to Cart"></td>
+        <td><input type="button" onclick="bigSale();" value="Cut Prices!"></td>
+      </tr>
+    </table>
+    <div id="divItems"> innerHTML  </div>
+    <hr />
+    <div id="divSubtotal">Subtotal = $</div>
+    <br/>
+    <div id="divAverage">Average = $</div>
+    <br/>
+    <div id="divDetails">Details</div>
+    <br/>
+    <em>Trace program execution in jso-art.js</em>
+  </body>
+</html>

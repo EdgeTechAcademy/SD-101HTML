@@ -1,0 +1,26 @@
+
+/* CSS Document */
+body{
+	background: #6595A3;
+	padding: 0 20px
+}
+
+.clear{
+	clear: both;
+	overflow: hidden;
+	height: 0
+}
+
+#all{
+	background: #FCFFED;
+}
+
+h1{
+	font: 26px tahoma, arial;
+	color: #324143
+}
+
+
+a{
+	color: #324143
+}

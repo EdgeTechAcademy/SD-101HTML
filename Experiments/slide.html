@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+
+.w3-content { max-width: 980px; margin: auto }
+
+.w3-animate-top { position: relative; animation: animatetop 0.4s }
+@keyframes animatetop {
+  from { top: -300px; opacity: 0  }
+  to { top: 0; opacity: 1 }
+}
+
+.w3-animate-left { position: relative; animation: animateleft 1.4s}
+@keyframes animateleft {
+  from { left: -300px; opacity: 0  }
+  to { left: 0; opacity: 1  }
+}
+
+.w3-animate-right { position: relative; animation: animateright 1.4s }
+@keyframes animateright {
+  from { right: -300px; opacity: 0 }
+  to { right: 0; opacity: 1  }
+}
+
+.w3-animate-bottom { position: relative; animation: animatebottom 1.4s }
+@keyframes animatebottom {
+  from { bottom: -300px; opacity: 0  }
+  to { bottom: 0; opacity: 1  }
+}
+
+.w3-animate-zoom { animation: animatezoom 2.0s }
+@keyframes animatezoom {
+  from { transform: scale(0)  }
+  to { transform: scale(1) }
+}
+</style>
+<body>
+
+  <h2>Animated Slides</h2>
+  <p>Slide or fade in an element</p>
+
+<div class="w3-content w3-section" style="max-width:300px">
+  <img class="mySlides w3-animate-top" src="The Castle.jpg" style="height:200px; width:100%">
+  <img class="mySlides w3-animate-bottom" src="hotSauce.jpg" style="height:200px; width:100%">
+  <img class="mySlides w3-animate-left" src="The Castle.jpg" style="height:200px; width:100%">
+  <img class="mySlides w3-animate-zoom" src="hotSauce.jpg" style="height:200px; width:100%">
+</div>
+
+<script>
+var x = document.getElementsByClassName("mySlides");
+var myIndex = x.length-1;
+carousel();
+
+function carousel() {
+   x[myIndex].style.display = "none";
+   myIndex++;
+   myIndex %= x.length;
+   x[myIndex].style.display = "block";
+   setTimeout(carousel, 2500);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style media="screen">
+    #earth {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 3em auto;
+      background: url(https://twistedsifter.files.wordpress.com/2013/08/flag-map-denmark-puerto.jpg?w=800&h=397) 0 0 repeat;
+      border-radius: 50%;
+      background-size: 630px;
+      animation: rotate 19s linear infinite;
+      transition: transform 200ms linear;
+      transform-style: preserve-3d;
+      box-shadow: inset 5px 0 20px 1.5px rgba(0, 0, 0, 1);
+      color: #000;
+    }
+
+    #earth:after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      box-shadow: -40px 7.5px 40px 5px rgba(0, 0, 0, .9) inset;
+    }
+
+    #earth:before {
+      content: "";
+      position: inherit;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.05;
+      background: radial-gradient(circle at 150px 150px, #fff, #000);
+    }
+
+    @keyframes rotate {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 630px 0;
+      }
+    }
+
+    #A101 {
+      background-color: #c0c;
+    }
+
+    #A101:hover {
+      background-color: #ff0;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Earth</title>
+</head>
+
+<body>
+  <div id="earth">
+  </div>
+  </div>
+  <div id='A101'>
+
+  </div>
+  <div id="morning">
+
+  </div>
+</body>
+<script type="text/javascript">
+  function whatEver(aParam) {
+    var list=document.getElementById("earth");
+    list.parentNode.removeChild(list);  }
+
+  function theName() {
+    document.getElementById('A101').innerHTML = 'Hello Edge Tech';
+    for (i = 200; i > 100; i -= 10)
+      console.log(i)
+  }
+  // Transitions
+  function slideClosed(el) {
+    var element = document.getElementById(el);
+    element.style.transition = "height 1.0s ease-out 0s";
+    element.style.height = "0px";
+  }
+
+  function slideOpen(el) {
+    var element = document.getElementById(el);
+    element.style.transition = "height 1.0s ease-in 0s";
+    element.style.height = "175px";
+  }
+
+  function fadeIn(el) {
+    var element = document.getElementById(el);
+    element.style.transition = "opacity 1.0s linear 0s";
+    element.style.opacity = 1;
+  }
+
+  function fadeOut(el) {
+    var element = document.getElementById(el);
+    element.style.transition = "opacity 1.0s linear 0s";
+    element.style.opacity = 0;
+  }
+
+  function changeColor(el, color) {
+    var element = document.getElementById(el);
+    element.style.transition = "background 1.0s linear 0s";
+    element.style.background = color;
+  }
+</script>
+<h2>Transition</h2>
+<button onclick="slideClosed('myBox');">Slide Close</button>
+<button onclick="slideOpen('myBox');">Slide Open</button>
+<button onclick="fadeOut('myBox');">Fade Out</button>
+<button onclick="fadeIn('myBox');">Fade In</button>
+<button onclick="theName();">Call JavaScript</button>
+<button onclick="whatEver('some text');">Test Button</button>
+<p></p>
+<div id='myBox' class='myBox'>
+  <p>You can't change me!</p>
+</div>
+<button onclick="changeColor('myBox', '#FF00FF');">Magenta</button>
+<button onclick="changeColor('myBox', '#0000CD');">Medium Blue</button>
+<button onclick="changeColor('myBox', '#00FF00');">Lime</button>
+<button onclick="changeColor('myBox', '#DC143C');">Original</button>
+
+
+</html>

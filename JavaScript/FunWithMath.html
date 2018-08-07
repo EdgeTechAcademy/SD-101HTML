@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fun with Maths</title>
+  </head>
+  <body>
+    <label for="">Distance</label>
+    <input type="text" id="distance" value="">
+    <div id="conversion">
+
+    </div>
+    <input type="text" id="radius" value="">
+    <div id='area'></div>
+    <button type="button" onclick="getArea(document.getElementById('radius').value)" name="button">Get Area</button>
+  </body>
+  <script type="text/javascript">
+    function getArea(radius) {
+      var area = circleArea(radius);
+      var eArea = document.getElementById('area');
+      eArea.innerHTML = "Circle with radius " + radius +
+                          " has area " + area.toFixed(2);
+    }
+
+    function circleArea(radius) {
+      area = radius * radius * Math.PI;
+      return area;    //  Math.pow(radius,2) * Math.PI;
+    }
+  </script>
+</html>

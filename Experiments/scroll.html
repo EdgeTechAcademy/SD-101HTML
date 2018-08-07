@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/master.css">
+<script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.bf357a6ba1a5f1fa0ddb61377ae3add5.js"></script>
+
+<a class="filename" target="_blank" href="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js" title="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js" rel="noopener">
+            skrollr.min.js
+          </a>
+<style media="screen">
+  #container {
+    background - color: black;
+    width: 500 px;
+    height: 300 px;
+    overflow: hidden;
+
+  }
+
+  div {
+    position: fixed;
+  }
+
+  .bg {
+    width: 500 px;
+    height: 300 px;
+  }
+</style>
+<script type="text/javascript">
+  skrollr.init();
+</script>
+<div id="container">
+  <div class="bg" style="background-color:red" data-0="transform:translate3d(0%,0%,0); opacity:1" data-5000="transform:translate3d(-100%,0%,0); opacity:0">
+  </div>
+
+  <div class="bg" style="background-color:green; " data-0="transform:translate3d(100%,0%,0); opacity:0" data-5000="transform:translate3d(0%,0%,0);opacity:1" data-10000="transform:translate3d(-100%,0%,0);opacity:0">
+  </div>
+
+  <div class="bg" style="background-color:orange" data-5000="transform:translate3d(100%,0%,0); opacity:0" data-10000="transform:translate3d(0%,0%,0); opacity:1">
+  </div>
+</div>

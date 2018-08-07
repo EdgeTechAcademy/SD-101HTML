@@ -1,0 +1,27 @@
+body {
+  background-color: darkgrey;
+}
+
+h1 {
+  background-color: lightgrey;
+  color: blue;
+}
+
+.newProd {
+  background-color: yellow;
+  color: green;
+}
+#hello {
+  color: white;
+}
+
+h1:first-letter {
+  color:wheat;
+  font-size: 50px;
+}
+
+#btnSubmit:hover {
+  background-image: URL("../images/color-wheel.png");
+  height:200px;
+  width:200px;
+}
