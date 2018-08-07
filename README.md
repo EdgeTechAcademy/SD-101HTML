@@ -1,13 +1,13 @@
 # SD-101HTML
-* Week HTML
+* Week HTML  
 The week's labs for HTML
-* Week CSS
+* Week CSS  
 CSS labs
-* Week Bootstrap
+* Week Bootstrap  
 Transitioning into Bootstrap =
-* CSS-Dali
+* CSS-Dali  
 More CSS development
-* JavaScript
+* JavaScript  
 Making the web sites interactive
 
 # Student developed web site
@@ -15,8 +15,10 @@ Making the web sites interactive
 * Favorite Movies
 * tic-tac-toe
 
+# Examples to add to the lessons
 * Experiments
 
+# The End
 * Final Review
 * Final Lab Exam - Completed
 * Final Lab Exam
