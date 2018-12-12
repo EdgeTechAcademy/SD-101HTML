@@ -25,7 +25,7 @@
       border-collapse: collapse;
     }
 
-    td {
+    th, td {
       border: 2px solid red;
       border-style: dashed;
       border-collapse: separate;
@@ -37,22 +37,21 @@
 <BODY BGCOLOR="#5F9EC4">
   <a href="http://EdgeTechAcademy.com">Edge Tech</a> Link to our school's home page!
   <HR>
-  <H2>Hello Gary</H2>
   <P>
-    <strong>This is a new paragraph!</strong>
-    <p>
-      <a href="www.cnn.com"> CNN </a>
-    </p>
     <label for="example1">Medicaid/Medicare</label>
     <input type="checkbox" onclick='medicaid()' name="example1" id="example1" value="Example 1" />
     <div id='medicaid' style='visibility:hidden'>
       <p>
         <em>This is a new sentence without a paragraph break, in bold italics.</em>
         <p>
-          <label for="userName">User Name:</label>
-          <input type="text" name="userName" id="userName" class='inputStyle1' />
-        </p>
-        <p>
+            <label for="userName">User Name:</label>
+            <input type="text" name="userName" id="userName" class='inputStyle1' />
+          </p>
+          <p>
+              <label for="background">Change Background Color:</label>
+              <input type="color" oninput="bgColorChange(this)" name="background" id="background" class='inputStyle1' />
+            </p>
+              <p>
           <label for="password">Password:</label>
           <input type="password" name="password" id="password" class="inputStyle2" />
         </p>
@@ -61,31 +60,38 @@
         </p>
         <HR>
     </div>
-    </p>
-    <table>
-      <thead>
-        <th>Company ID</th>
-        <th>Corporation Name</th>
-        <th>Yearly Revenue</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>121</td>
-          <td>Company Z</td>
-          <td>$100,000,000</td>
-        </tr>
-        <tr>
-          <td>328</td>
-          <td>Company Omega</td>
-          <td>$221,561,000</td>
-        </tr>
-      </tbody>
-    </table>
+  </p>
+  <table border='1'>
+    <caption>Company Revenue for 2018</caption>
+    <thead>
+      <th>Company ID</th>
+      <th>Corporation Name</th>
+      <th>Yearly Revenue</th>
+    </thead>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td>Total Revenue in USD$</td>
+        <td>$321,561,000</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>121</td>
+        <td>Company Z</td>
+        <td>$100,000,000</td>
+      </tr>
+      <tr>
+        <td>328</td>
+        <td>Company Omega</td>
+        <td>$221,561,000</td>
+      </tr>
+    </tbody>
+  </table>
 </BODY>
 <script type="text/javascript">
   function changeStyle() {
     let ele = document.getElementById("userName");
-    console.log(ele.className);
     ele.className = "inputStyle" + ((ele.className === "inputStyle1") ? "2" : "1");
   }
 
@@ -93,6 +99,10 @@
     div = document.getElementById('medicaid');
     div.style.visibility = (div.style.visibility == 'hidden') ? 'visible' : 'hidden';
   }
+
+function bgColorChange(fld) {
+   document.body.style.background = fld.value;
+}
 </script>
 
 </HTML>

@@ -4,12 +4,21 @@ body {
   margin: 0px;
 }
 
+header {
+  background-color: #62433f;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+
 h1 {
   background-color: #62433f;
   color: white;
   padding: 30px;
   margin: 40px 10px 30px;
-  border-width:
+  border-width: 3px;
 }
 
 figure {

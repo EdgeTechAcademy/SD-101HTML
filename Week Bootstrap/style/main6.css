@@ -2,7 +2,6 @@ body {
   background: url("../images/Butterfly Sails.jpg") top / cover no-repeat fixed;
   color: white;
   margin: 0px;
-  /* font: 100% verdana, sans-serif; */
 }
 
 figure {
@@ -22,9 +21,7 @@ footer {
 }
 
 header {
-  /* background-color: #98644e; */
   color: white;
-  /* padding: 10px; */
   margin: 0px;
   position: fixed;
   top: 0px;
@@ -35,39 +32,20 @@ h1 {
   font-family: 'Adelle W01 Bold', 'Arvo', Constantia, 'Lucida Bright';
 }
 
-.navbar-nav a{
-  color:white;
+section {
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
-.navbar-nav li > a:hover {
+.navbar-nav a {
+  color: white;
+}
+
+.navbar-nav li>a:hover {
   background-color: transparent;
   color: white;
   border: 2px solid white;
   border-radius: 15px;
-}
-/*
-.navbar-primary a {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-primary ul {
-  background-color: #62433f;
-  margin: 0px;
-  position: absolute;
-  top: 80px;
-  left: 0px;
-  width: 100%;
-}
-
-.navbar-primary ul li{
-  display: inline-block;
-  padding: 5px 10px;
-} */
-
-section {
-  margin-top: 120px;
-  margin-bottom: 120px;
 }
 
 .banner {
@@ -82,6 +60,7 @@ section {
 .center-in-container {
   margin: auto;
 }
-.showcase img{
+
+.showcase img {
   width: 100%;
 }
